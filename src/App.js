@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import ListaDeTareas from './componentes/ListaDeTareas';
 import PersonCard from './componentes/PersonCard';
+import MyNewComponent from './componentes/MyNewComponent';
+import LightSwitch from './componentes/LightSwitch';
+
 
 function App() {
   return (
@@ -10,9 +13,21 @@ function App() {
       <h4>Things I need to do:</h4>
       {/* <ListaDeTareas tareaEspecial="Darle de comer al hamster!"/> */}
       {/* Pasemos sus props(atributos) */}
-      <PersonCard firstName={"Jhomar"} lastName={"Astuyauri"} age={22} hairColor={"negro"}/>
+      <PersonCard firstName={"Jhomar"} lastName={"Astuyauri"} age={22} hairColor={"negro"}/> 
       <PersonCard firstName={"Elias"} lastName={"Herencia"} age={18} hairColor={"marron"}/>
-      <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/>
+      <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/> 
+      
+
+      {/* <MyNewComponent header={ "Header Prop" }>
+            <p>This is a child</p>
+            <p>This is another child</p>
+            <p>This is even another child</p>
+      </MyNewComponent>   */}
+
+      {/* <button onClick={() => alert("Este botón ha sido clickeado!")}>Click me!</button> */}
+
+      <LightSwitch/>
+      
     </div>
   );
 }
