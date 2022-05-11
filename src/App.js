@@ -4,6 +4,7 @@ import ListaDeTareas from './componentes/ListaDeTareas';
 import PersonCard from './componentes/PersonCard';
 import MyNewComponent from './componentes/MyNewComponent';
 import LightSwitch from './componentes/LightSwitch';
+import PersonCardFunctional from './componentes/PersonCardFunctional';
 
 
 function App() {
@@ -13,10 +14,15 @@ function App() {
       <h4>Things I need to do:</h4>
       {/* <ListaDeTareas tareaEspecial="Darle de comer al hamster!"/> */}
       {/* Pasemos sus props(atributos) */}
-      <PersonCard firstName={"Jhomar"} lastName={"Astuyauri"} age={22} hairColor={"negro"}/> 
+      {/* <PersonCard firstName={"Jhomar"} lastName={"Astuyauri"} age={22} hairColor={"negro"}/> 
       <PersonCard firstName={"Elias"} lastName={"Herencia"} age={18} hairColor={"marron"}/>
-      <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/> 
-      
+      <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/>  */}
+
+
+      <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
+      <PersonCardFunctional firstName="him" lastName="astuyauri" age={21} hairColor={"red"}/>
+      <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={58} hairColor={"black"}/>
+      <PersonCardFunctional firstName="matias" lastName="astuyauri" age={8} hairColor={"black"}/>
 
       {/* <MyNewComponent header={ "Header Prop" }>
             <p>This is a child</p>
