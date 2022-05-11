@@ -5,6 +5,7 @@ import PersonCard from './componentes/PersonCard';
 import MyNewComponent from './componentes/MyNewComponent';
 import LightSwitch from './componentes/LightSwitch';
 import PersonCardFunctional from './componentes/PersonCardFunctional';
+import Formulario from './componentes/Formulario';
 
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
       <PersonCard firstName={"Elias"} lastName={"Herencia"} age={18} hairColor={"marron"}/>
       <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/>  */}
 
+      <Formulario/>
 
-      <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
+      {/* <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
       <PersonCardFunctional firstName="him" lastName="astuyauri" age={21} hairColor={"red"}/>
       <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={58} hairColor={"black"}/>
-      <PersonCardFunctional firstName="matias" lastName="astuyauri" age={8} hairColor={"black"}/>
+      <PersonCardFunctional firstName="matias" lastName="astuyauri" age={8} hairColor={"black"}/> */}
 
       {/* <MyNewComponent header={ "Header Prop" }>
             <p>This is a child</p>
