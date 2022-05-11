@@ -7,17 +7,32 @@ const Formulario = props =>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] =useState("");
+    const [subido, setSubido] = useState(false);
 
     const createUser = (e) => {
         e.preventDefault(); 
         const newUser = { firstname, lastname, password, confirmPassword };
         console.log("Welcome", newUser);
-        // setUsername("");
+        // Cambiamos el valor de nuestra var
+        setSubido(true);
     };
+
+    // const formMessage = () =>{
+    //     if(subido){
+    //         return "Has sido registrado!";
+    //     }return "Por favor, regístrate!";
+    // }
 
     return(
         <div>
             <form onSubmit={createUser}>
+                {/* Mensaje */}
+                {/* Usando el operador Ternario */}
+            {
+                subido ?
+                <h2>Gracias, te registraste!</h2> :
+                <h2>Registrate por favor!</h2>
+            }
             <div>
                 <label>Nombre: </label>
                 <input type="text" onChange={e => setFirstname(e.target.value)} value={firstname}/>
