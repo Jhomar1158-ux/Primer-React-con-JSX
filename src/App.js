@@ -7,9 +7,20 @@ import LightSwitch from './componentes/LightSwitch';
 import PersonCardFunctional from './componentes/PersonCardFunctional';
 import Formulario from './componentes/Formulario';
 import MovieForm from './componentes/MovieForm';
+import Groceries from './componentes/Groceries';
+import MessageForm from './componentes/MessageForm';
+import MessageDisplay from './componentes/MessageDisplay';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [currentMsg, setCurrentMsg] = useState("There are no messages");
+
+  const youveGotMail = newMessage =>{
+    setCurrentMsg(newMessage);
+  }
+
   return (
     <div className="App">
       <h1>Hello Dojo!</h1>
@@ -19,9 +30,11 @@ function App() {
       {/* <PersonCard firstName={"Jhomar"} lastName={"Astuyauri"} age={22} hairColor={"negro"}/> 
       <PersonCard firstName={"Elias"} lastName={"Herencia"} age={18} hairColor={"marron"}/>
       <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/>  */}
-
-      <Formulario/>
+      {/* <Groceries/> */}
+      {/* <Formulario/> */}
       {/* <MovieForm/> */}
+      <MessageForm onNewMessage={youveGotMail}/>
+      <MessageDisplay message={currentMsg}/>
       {/* <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
       <PersonCardFunctional firstName="him" lastName="astuyauri" age={21} hairColor={"red"}/>
       <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={58} hairColor={"black"}/>
@@ -35,7 +48,7 @@ function App() {
 
       {/* <button onClick={() => alert("Este botón ha sido clickeado!")}>Click me!</button> */}
 
-      <LightSwitch/>
+      {/* <LightSwitch/> */}
       
     </div>
   );
