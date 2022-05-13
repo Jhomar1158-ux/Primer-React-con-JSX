@@ -11,14 +11,21 @@ import Groceries from './componentes/Groceries';
 import MessageForm from './componentes/MessageForm';
 import MessageDisplay from './componentes/MessageDisplay';
 import { useState } from 'react';
+import DisplayCajasForm from './componentes/DisplayCajasForm';
+import GeneradorCajasForm from './componentes/GeneradorCajasForm';
 
 
 function App() {
 
-  const [currentMsg, setCurrentMsg] = useState("There are no messages");
+  // const [currentMsg, setCurrentMsg] = useState("There are no messages");
+  const [currentColor, setCurrentColor] = useState([]);
 
-  const youveGotMail = newMessage =>{
-    setCurrentMsg(newMessage);
+  const yourNewColor = e =>{
+    console.log(e)
+    // Color -> e
+    // EL push no sirve para manejar sets*
+    setCurrentColor([...currentColor, e]);
+    console.log(currentColor)
   }
 
   return (
@@ -33,8 +40,10 @@ function App() {
       {/* <Groceries/> */}
       {/* <Formulario/> */}
       {/* <MovieForm/> */}
-      <MessageForm onNewMessage={youveGotMail}/>
-      <MessageDisplay message={currentMsg}/>
+      <DisplayCajasForm currentColor={currentColor} />
+      <GeneradorCajasForm onNewColor={yourNewColor}/>
+      {/* <MessageForm onNewMessage={youveGotMail}/>
+      <MessageDisplay message={currentMsg}/> */}
       {/* <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
       <PersonCardFunctional firstName="him" lastName="astuyauri" age={21} hairColor={"red"}/>
       <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={58} hairColor={"black"}/>
