@@ -6,6 +6,7 @@ import MyNewComponent from './componentes/MyNewComponent';
 import LightSwitch from './componentes/LightSwitch';
 import PersonCardFunctional from './componentes/PersonCardFunctional';
 import Formulario from './componentes/Formulario';
+import MovieForm from './componentes/MovieForm';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <PersonCard firstName={"Maria"} lastName={"Ying"} age={65} hairColor={"blanco"}/>  */}
 
       <Formulario/>
-
+      {/* <MovieForm/> */}
       {/* <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={23} hairColor={"black"}/>
       <PersonCardFunctional firstName="him" lastName="astuyauri" age={21} hairColor={"red"}/>
       <PersonCardFunctional firstName="Lolo" lastName="astuyauri" age={58} hairColor={"black"}/>
